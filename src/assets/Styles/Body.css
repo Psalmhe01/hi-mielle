@@ -1,0 +1,94 @@
+@import '@mantine/core/styles/PinInput';
+
+.container{
+    max-width: 1200px;
+    width:fit-content;
+    justify-items: center;
+}
+
+.card{
+    height: 200px;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 2.5rem;
+    background-color: rgb(252, 224, 229);
+    box-shadow: 1rem 0.5rem 40px rgba(106, 74, 74, 0.366);
+    opacity: 80%;
+    align-content: center;
+}
+.card Stack{
+    align-items: center;
+    justify-content: space-between;
+}
+.card p{
+    margin: 2rem;
+    width: 300px;
+    height: min-content;
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.card button{
+    background-color: palevioletred;
+    outline: none;
+    border-color: rgb(156, 81, 106);
+}
+
+.card button:hover{
+    background-color: rgb(171, 75, 105);
+    outline: none;
+    border-color: rgb(156, 81, 106);
+}
+
+
+.pin div{
+    display: flex;
+    gap: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+.pin{
+    animation: boom 2s;
+}
+
+.pin input{
+    width:inherit;
+    height: inherit;
+    border-radius: 5px;
+    background-color: rgba(255, 240, 246, 0.501);
+    font-size: xx-large;
+    color: rgb(168, 1, 85);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pin input::after{
+    outline: 2px solid green;
+}
+
+.fadeIn{
+    animation: fadeIn 2s;
+    transition: fadeOut 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; scale: 200%;}
+  100% { opacity: 1; scale: 100%;}
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+@keyframes boom{
+    from {
+    transform: translateY(100%);
+    opacity: 30%
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
