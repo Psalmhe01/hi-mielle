@@ -19,7 +19,7 @@ const [isVisible, setVisibility] = useState(true);
     {change ? 
     (
         <div >
-            <h1 className='fadeIn' >Welcome, Mielle!</h1>
+            <h1 className='fadeIn' >Welcome, Mielle!!</h1>
         </div>
     ) 
     
