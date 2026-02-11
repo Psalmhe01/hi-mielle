@@ -5,7 +5,7 @@ import Pin from './Pin';
 
 function Body() {
   return (
-    <div className='container'>
+    <div className='bit-container'>
     
     <Center maw={400} h={100} bg="var(--mantine-color-gray-light)">
          <Pin/>

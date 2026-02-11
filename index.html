@@ -9,5 +9,22 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      function createFloatingBitmoji() {
+        const bit = document.createElement("div");
+        bit.classList.add("floating-bit");
+        bit.innerHTML = "bitmoji.png";
+
+        bit.style.left = Math.random() * 100 + "vw";
+        bit.style.fontSize = Math.random()* 20 +10 + "px";
+        bit.style.animationDuration= Math.random() * 10 + 10 + "s";
+
+        document.getElementById("bit-container").appendChild(bit);
+
+        setTimeout(() => {
+          bit.remove();
+        }, 20000);
+      }
+    </script>
   </body>
 </html>
