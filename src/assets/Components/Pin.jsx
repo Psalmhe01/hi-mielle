@@ -43,7 +43,7 @@ function Pin() {
                     <h1>Hello, Welcome!</h1>
                     <h2>First of all, verify your identity 🧐</h2>
                     <h3>When is our anniversary date?</h3>
-                    <PinInput length={4} onComplete={handlePin} />
+                    <div><PinInput length={4} onComplete={handlePin} /></div>
                 </div>
             ) : (
                 <div style={{ position: 'relative' }}>

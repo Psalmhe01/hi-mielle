@@ -7,11 +7,11 @@
     justify-items: center;
 }
 
-.floating-bit{
-    position: 'absolute';
-    animation: float 15s infinite linear;
-    z-index: 0;
+.floating-bit {
     pointer-events: none;
+    position: absolute;
+    animation: popFade 10s ease-in-out forwards;
+    opacity: 0;
 }
 
 .card{
@@ -59,11 +59,20 @@
 
 .pin{
     animation: boom 2s;
+    border-radius: 10px;
+    padding: 2.5rem;
+    background-color: rgba(255, 231, 235, 0.826);
+    box-shadow: 0rem 0.5rem 40px rgba(106, 74, 74, 0.366);
 }
 
 .pin input{
-    width:inherit;
-    height: inherit;
+    width:fit-content;
+    width: 12vw; 
+    height: 12vw;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 40px;
+    min-height: 40px;
     border-radius: 5px;
     background-color: rgba(255, 240, 246, 0.501);
     font-size: xx-large;
@@ -93,18 +102,21 @@
 
 
 .yes-no{
-    width: 100px;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     gap: 2rem;
     align-items: center;
     justify-self: center;
+    justify-content: center;
+    overflow: hidden;
 } 
 
 .yes-no button{
     background-color: palevioletred;
     outline: none;
     border-color: rgb(156, 81, 106);
+    width: 80px;
 }
 
 .yes-no button:hover{
@@ -119,6 +131,11 @@
     
 }
 
+.said-yes h1{
+    font-family: 'Lavishly Yours', cursive;
+    font-weight: bolder;
+    font-size: 100px;
+}
 
 
 @keyframes pump{
@@ -130,18 +147,33 @@
 
 }
 
-
-@keyframes float {
+@keyframes popFade {
     0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 1;
+        opacity: 0.5;
+        /* Start fully off-screen at the bottom */
+        transform: translateY(105vh) scale(0.5) rotate(0deg);
+    }
+    25% {
+        opacity: 0.375;
+        /* Moving up to 75% height */
+        transform: translateY(70vh) scale(0.45) rotate(90deg);
+    }
+    50% {
+        opacity: 0.25;
+        /* Halfway up with the horizontal drift and half-rotation */
+        transform: translateY(40vh) translateX(15vw) scale(0.4) rotate(180deg);
+    }
+    75% {
+        opacity: 0.15;
+        /* Almost at the top */
+        transform: translateY(10vh) scale(0.35) rotate(270);
     }
     100% {
-        transform: translateY(-10vh) rotate(360deg);
         opacity: 0;
+        /* Fully off the top (-20vh) and full rotation completed */
+        transform: translateY(-20vh) scale(0.3) rotate(360deg);
     }
 }
-
 
 
 
