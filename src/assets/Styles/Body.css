@@ -1,5 +1,6 @@
 @import '@mantine/core/styles/PinInput';
 
+
 .container{
     max-width: 1200px;
     width:fit-content;
@@ -15,6 +16,7 @@
     box-shadow: 1rem 0.5rem 40px rgba(106, 74, 74, 0.366);
     opacity: 80%;
     align-content: center;
+    animation: fadeIn 2s;
 }
 .card Stack{
     align-items: center;
@@ -69,17 +71,72 @@
 
 .fadeIn{
     animation: fadeIn 2s;
-    transition: fadeOut 2s;
 }
+
+.fadeOut{
+    animation: fadeIn 1s ease-in forwards; 
+    transition: fadeOut 1s ease-in forwards;
+    
+}
+
+.popQuestion{
+    position: relative;
+}
+
+
+
+.yes-no{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-self: center;
+} 
+
+.yes-no button{
+    background-color: palevioletred;
+    outline: none;
+    border-color: rgb(156, 81, 106);
+}
+
+.yes-no button:hover{
+    background-color: rgb(171, 75, 105);
+    outline: none;
+    border-color: rgb(156, 81, 106);
+}
+
+.heart-pump{
+    font-size: 70px;
+    animation: pump 1.2s infinite;
+    
+}
+
+@keyframes pump{
+    0%, 100% {transform: scale(1.1)};
+    25% {transform: scale(1.1)}
+    50% {transform: scale(1)};
+    75% {transform: scale(1.1)};
+    
+
+}
+
+
+
+
+
+
+
+
 
 @keyframes fadeIn {
   0% { opacity: 0; scale: 200%;}
-  100% { opacity: 1; scale: 100%;}
+  100% { opacity: 0.8; scale: 100%;}
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1;}
-  100% { opacity: 0;}
+  0% { opacity: 1; transform: translateY(0px);}
+  100% { opacity: 0; transform: translateY(-20px)}
 }
 
 @keyframes boom{
