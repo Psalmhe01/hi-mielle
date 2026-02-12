@@ -16,4 +16,4 @@ function SheSaidYes(){
     )
 }
 
-export default SheSaidYes
+export default SheSaidYes;

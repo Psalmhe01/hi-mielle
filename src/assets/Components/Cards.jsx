@@ -2,8 +2,8 @@ import { Paper, Button, Stack, Transition } from "@mantine/core";
 import { useEffect, useState } from 'react';
 import "../Styles/Body.css";
 import Words from "../Words";
-import SheSaidYes from "./sheSaidYes";
 import confetti from "canvas-confetti";
+import SheSaidYes from "./SheSaidYes";
 
 function Cards() {
     const [count, setCount] = useState(0);
