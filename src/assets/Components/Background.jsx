@@ -11,7 +11,7 @@
         bit.classList.add("floating-bit");
         
         // Use the actual image
-        bit.innerHTML = `<img src="../Image/bitmoji.jpg" style="width: 50px; height: auto;" />`;
+        bit.innerHTML = `<img src="../Image/bitmoji.png" style="width: 50px; height: auto;" />`;
 
         // RANDOM POSITIONING
         const randomTop = Math.floor(Math.random() * 90); // 0 to 90vh
