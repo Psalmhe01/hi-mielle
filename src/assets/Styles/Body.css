@@ -209,27 +209,27 @@
     0% {
         opacity: 0.75;
         /* Start fully off-screen at the bottom */
-        transform: translateY(105vh) scale(0.75) rotate(0deg);
+        transform: translateY(105vh) scale(0.75) ;
     }
     25% {
         opacity: 0.5;
         /* Moving up to 75% height */
-        transform: translateY(70vh) scale(0.65) rotate(90deg);
+        transform: translateY(70vh) scale(0.65) ;
     }
     50% {
         opacity: 0.375;
         /* Halfway up with the horizontal drift and half-rotation */
-        transform: translateY(40vh) translateX(15vw) scale(0.55) rotate(180deg);
+        transform: translateY(40vh) translateX(15vw) scale(0.55) ;
     }
     75% {
         opacity: 0.25;
         /* Almost at the top */
-        transform: translateY(10vh) scale(0.45) rotate(270deg);
+        transform: translateY(10vh) scale(0.45) ;
     }
     100% {
         opacity: 0;
         /* Fully off the top (-20vh) and full rotation completed */
-        transform: translateY(-20vh) scale(0.35) rotate(360deg);
+        transform: translateY(-20vh) scale(0.35) ;
     }
 }
 
