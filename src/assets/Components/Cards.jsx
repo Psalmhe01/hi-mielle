@@ -54,8 +54,7 @@ function Cards() {
         <>
         {(count < Words.length) ? (
         <div className="card">
-            <Paper shadow="xl" p="xl">
-                <Stack align="center" h={150} justify="center">
+                
                     <Transition 
                         mounted={opened} 
                         transition="fade-up"
@@ -63,44 +62,46 @@ function Cards() {
                         timingFunction="ease"
                     >
                         {(styles) => (
-                            <p style={styles} id="word">
+                            <div>
+                            <h2 style={styles} id="word">
                                 {Words[count]}
-                            </p>
-                        )}
-                    </Transition>
-                    
-                    <Button 
+                            </h2>
+                            <Button 
                         onClick={next} 
                         disabled={!opened} 
-                        color="pink" 
                         variant="light"
                     >
                         Click me 💕
                     </Button>
-                </Stack>
-            </Paper>
+                            </div>
+                        )}
+                    </Transition>
+                    
+                    
         </div>
         ): 
             (
                 <>{(!sayYes) ? (
                 <div className="popQuestion">
-                <div className="heart-pump">❤️</div>
-                <h1>Will you be my Valentine?</h1>
-                <p>(If you like no talk yes 😒)</p>
-                    <div className="yes-no">
-                    <button id="yes-btn" onClick={() => {setYes(true), launchConfetti()}}> YES! </button>
-                    <button 
-                        className="no-btn" 
-                        id="no-btn" 
-                        onClick={moveButton}
-                        onMouseEnter={moveButton}
-                        style={{
-                        ...style,
-                        transition: 'all 0.2s ease',
-                        }}
-                    >
-                        No </button> 
-                </div>
+                    <h2>Will you be my</h2>
+                    <div className="heart-pump">❤️</div>
+                    <h1> Valentine?</h1>
+                    <p>(If you like no talk yes 😒)</p>
+                        <div className="yes-no">
+                            <button id="yes-btn" onClick={() => {setYes(true), launchConfetti()}}> Yes! </button>
+                            <button 
+                                className="no-btn" 
+                                id="no-btn" 
+                                onClick={moveButton}
+                                onMouseEnter={moveButton}
+                                style={{
+                                ...style,
+                                transition: 'all 0.2s ease',
+                                }}
+                            >
+                                No 
+                            </button> 
+                        </div>
                 </div>
             ):
             (<SheSaidYes />)

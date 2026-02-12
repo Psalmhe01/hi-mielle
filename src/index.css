@@ -1,12 +1,19 @@
 
 :root {
-  font-family: 'Montserrat Alternates',system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(0, 74, 131, 0.87);
-  background-color: pink;
+  color: var(--purple1);
+  background-color: var(--pink1);
+  --purple1: #321051;
+  --purple2: #6c2577;
+  --beige: #ffe2f1;
+  --pink1: #efbbcc;
+  --pink2: #f06292;
+  --darkPink1: #ad1457;
+  --darkPink2: #880e4f;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,14 +21,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
   margin: 0;
@@ -29,49 +28,49 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 button {
+  width: 80px;
+  height: 40px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  background-color: var(--purple1);
+  opacity: 90%;
+  border: solid 1px transparent;
   font-family: inherit;
-  background-color: #1a1a1a;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.6em 1.2em;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: var(--beige);
+  
 }
-button:hover {
-  border-color: #646cff;
+
+button:hover{
+  background-color: var(--beige);
+  color: var(--darkPink2);
+  border: solid 1px var(--darkPink2);
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 1px auto var(--darkPink2);
 }
 
-.floating-bit{
-    position: 'absolute';
-    animation: float 15s infinite linear;
-    z-index: 0;
-    pointer-events: none;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* index.css */
+@media (max-width: 480px) {
+  #root {
+    padding: 1rem; /* Smaller padding for mobile */
   }
-  a:hover {
-    color: #747bff;
+  
+  .pin {
+    padding: 1.5rem; /* Shrink the container padding too */
   }
-  button {
-    background-color: #f9f9f9;
+
+  .pin h1 {
+    font-size: 32px; /* Prevent the giant header from pushing the width */
   }
 }

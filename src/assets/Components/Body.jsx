@@ -8,9 +8,8 @@ function Body() {
   return (
     <div className='container'>
     <Background />
-    <Center maw={400} h={100} bg="var(--mantine-color-gray-light)">
          <Pin/>
-    </Center>
+    
     </div>
   );
 }

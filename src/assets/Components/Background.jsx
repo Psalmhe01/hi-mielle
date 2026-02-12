@@ -35,7 +35,7 @@
         }, 20000);
         };
 
-        const interval = setInterval(createBitmoji, 500); // New one every second
+        const interval = setInterval(createBitmoji, 250); // New one every 1/4 second
         return () => clearInterval(interval);
     }, []);
 

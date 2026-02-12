@@ -22,12 +22,12 @@ function Pin() {
             // 1. Hide Welcome after 1.5s
             const exitTimer = setTimeout(() => {
                 setShowWelcome(false);
-            }, 1500);
+            }, 2500);
 
             // 2. Start Card animation after Welcome has had time to fade (approx 2s total)
             const enterTimer = setTimeout(() => {
                 setShowCards(true);
-            }, 2000);
+            }, 3000);
 
             return () => {
                 clearTimeout(exitTimer);
@@ -46,7 +46,7 @@ function Pin() {
                     <div><PinInput length={4} onComplete={handlePin} /></div>
                 </div>
             ) : (
-                <div style={{ position: 'relative' }}>
+                <div style={{ position: 'relative'}}>
                     {/* Welcome Message Transition */}
                     <Transition 
                         mounted={showWelcome} 
@@ -57,7 +57,7 @@ function Pin() {
                     >
                         {(styles) => (
                             <div style={{ ...styles, textAlign: 'center' }}>
-                                <h1 className='fadeIn'>Welcome, Mielle!!</h1>
+                                <h1 className='welcome'>Welcome, Mielle!!</h1>
                             </div>
                             
                         )}
@@ -70,7 +70,7 @@ function Pin() {
                         duration={800}
                     >
                         {(styles) => (
-                            <div style={styles}>
+                            <div style={{...styles}}>
                                 <Cards />
                             </div>
                         )}
