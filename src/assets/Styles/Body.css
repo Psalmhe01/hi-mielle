@@ -118,6 +118,7 @@
 .popQuestion{
     position: relative;
     scale: 1.2;
+    animation: boom 2s;
 }
 
 .popQuestion h2{
